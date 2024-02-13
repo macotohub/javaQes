@@ -47,9 +47,9 @@ public class Curriculum_New_1_18 {
 	// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッド
 	// ※小数点以下も表示されるように
 	public static double average(List<Integer> numbers){
-		int sum = 0;
+		double sum = 0;
 		// 受け取ったリストの値を変数sumへ順に追加していく
-		for(int number : numbers) {
+		for(double number : numbers) {
 			sum += number;
 		}
 		// 合計値をリストの要素数で割って平均値を出す
@@ -82,8 +82,8 @@ public class Curriculum_New_1_18 {
 		// Q4
 		System.out.println("\n" + times(3.14,6.72) + "\n");
 		// Q5,Q6
-		double mean = average(random(5));
-		System.out.println("\n" + mean + "\n");
+		double mean = average(random(3));
+		System.out.println("\n" + (Math.floor(mean * 100)) / 100 + "\n");
 		// Q7
 		judge(mean);
 	}
