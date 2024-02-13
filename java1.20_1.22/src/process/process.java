@@ -17,13 +17,16 @@ public class process {
 	// 自分用メモ
 	// thisはフィールドの変数、右辺は出力時引数に代入された文字列のことを指す
 	public process(String country,String food,String cuisine){
-		this.greeting = "こんにちは！ここは" + country + "です！";
-		this.country = country;
-		this.food = food;
-		this.cuisine = cuisine;
-		LocalDateTime nowDate = LocalDateTime.now();
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-		formatNowDate = dtf.format(nowDate);
+		// nullチェック
+		if((country != null) || (food != null) || (cuisine != null)) {
+			this.greeting = "こんにちは！ここは" + country + "です！";
+			this.country = country;
+			this.food = food;
+			this.cuisine = cuisine;
+			LocalDateTime nowDate = LocalDateTime.now();
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+			formatNowDate = dtf.format(nowDate);
+		}
 	}
 	
 	// 出力用の挨拶メソッド
