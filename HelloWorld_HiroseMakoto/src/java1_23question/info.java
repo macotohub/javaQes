@@ -5,7 +5,6 @@ public class info {
 	private String animalName;
 	private Double height;
 	private Integer speed;
-
 	// setter
 	public void setAnimalName(String animalName) {
 		this.animalName = animalName;
