@@ -14,7 +14,7 @@ public class process {
 	
 	// コンストラクタ
 	// 出力の際に引数に入れられた文字列を反映させる
-	// 自分用メモ、thisはフィールドの変数、右辺は出力時引数に代入された文字列のことを指す
+	// 自分用メモ、thisはフィールドの変数・右辺は出力時引数に代入された文字列のことを指す
 	public process(String country,String food,String cuisine){
 		// nullチェック
 		if((country != null) || (food != null) || (cuisine != null)) {
