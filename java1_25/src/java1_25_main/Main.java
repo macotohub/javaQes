@@ -3,31 +3,37 @@ package java1_25_main;
 import java.util.Random;
 import java.util.Scanner;
 
+import java1_25_sub.Status;
 import java1_25_sub.SubClass;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		Scanner scanner = new Scanner(System.in);
 		String name = scanner.next();
+		//sub.setName(name);
 		Random rand = new Random();
 		int[] numbers = new int[5];
 		
 		SubClass sub = new SubClass();
-		//status status = new status();
-		sub.setName(name);
+		Status status = new Status();
 		
+		sub.setName(name);
 		
 		for(int i = 0 ; i < numbers.length ; i++) {
 			int number = rand.nextInt(1000);
 			numbers[i] = number;
 		}
 		
+		status.setHp(numbers[0]);
+		status.setMp(numbers[1]);
+		status.setPower(numbers[2]);
+		status.setSpeed(numbers[3]);
+		status.setDefence(numbers[4]);
+		
 		sub.user();
-		//status.statusInfo();
+		status.statusInfo();
 	}
-
 }
 
 		
