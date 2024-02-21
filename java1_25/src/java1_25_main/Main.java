@@ -3,36 +3,36 @@ package java1_25_main;
 import java.util.Random;
 import java.util.Scanner;
 
-import java1_25_sub.Status;
 import java1_25_sub.SubClass;
+
 
 public class Main {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String name = scanner.next();
-		//sub.setName(name);
+
 		Random rand = new Random();
 		int[] numbers = new int[5];
 		
-		SubClass sub = new SubClass();
-		Status status = new Status();
 		
+		SubClass sub = new SubClass(name);
+		// setter使おうという指示だけど、これいる？？
 		sub.setName(name);
+		
 		
 		for(int i = 0 ; i < numbers.length ; i++) {
 			int number = rand.nextInt(1000);
 			numbers[i] = number;
 		}
 		
-		status.setHp(numbers[0]);
-		status.setMp(numbers[1]);
-		status.setPower(numbers[2]);
-		status.setSpeed(numbers[3]);
-		status.setDefence(numbers[4]);
+		sub.setHp(numbers[0]);
+		sub.setMp(numbers[1]);
+		sub.setPower(numbers[2]);
+		sub.setSpeed(numbers[3]);
+		sub.setDefence(numbers[4]);
 		
-		sub.user();
-		status.statusInfo();
+		sub.statusInfo();
 	}
 }
 
