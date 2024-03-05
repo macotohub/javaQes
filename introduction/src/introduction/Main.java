@@ -9,5 +9,20 @@ class Main {
 		person2.print();
 		
 		Person.printCount();
+		System.out.println("");
+		
+		Car car = new Car();
+		Bicycle bicycle = new Bicycle();
+		
+		car.setOwner(person1.fullName());
+		bicycle.setOwner(person2.fullName());
+		
+		System.out.println(car.getOwner());
+		System.out.println(bicycle.getOwner());
+		
+		person1.buy(car);
+		person2.buy(bicycle);
+		
+		
 	}
 }
