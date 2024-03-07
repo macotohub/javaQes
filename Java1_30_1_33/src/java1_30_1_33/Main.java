@@ -1,5 +1,7 @@
 package java1_30_1_33;
 
+import sub.Person;
+
 public class Main {
 	public static void main(String[] args) {
 		Person person1 = new Person("鈴木","太郎", 20, 1.7,60);
